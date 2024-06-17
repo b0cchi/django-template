@@ -1,0 +1,51 @@
+{
+    "name": "django template",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "web",
+    "workspaceFolder": "/workspace",
+    "forwardPorts": [
+        8080
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "always"
+                    }
+                },
+                "isort.args": [
+                    "--profile",
+                    "black"
+                ],
+                "mypy-type-checker.args": [],
+                "workbench.colorCustomizations": {
+                    "editorIndentGuide.background1": "#845EC2",
+                    "editorIndentGuide.background2": "#D65DB1",
+                    "editorIndentGuide.background3": "#FF6F91",
+                    "editorIndentGuide.background4": "#FF9671",
+                    "editorIndentGuide.background5": "#FFC75F",
+                    "editorIndentGuide.background6": "#F9F871",
+                    "editorIndentGuide.activeBackground1": "#845EC2",
+                    "editorIndentGuide.activeBackground2": "#D65DB1",
+                    "editorIndentGuide.activeBackground3": "#FF6F91",
+                    "editorIndentGuide.activeBackground4": "#FF9671",
+                    "editorIndentGuide.activeBackground5": "#FFC75F",
+                    "editorIndentGuide.activeBackground6": "#F9F871"
+                }
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-python.mypy-type-checker"
+            ]
+        }
+    }
+}

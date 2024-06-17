@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    tty: true
+    stdin_open: true
+    container_name: django_template
+    volumes:
+      - ../workspace:/workspace
+    ports:
+      - 127.0.0.1:8000:8000
